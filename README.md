@@ -140,18 +140,6 @@ Claude responds with **clean, structured JSON** — a computer-friendly, organis
 
 This JSON is what the rest of the app runs on. The **AI never writes the file directly** — it only produces the structured data. The actual Excel/PPT/infographic is built by a separate, deterministic renderer fed by this JSON. This is what makes every export reliable and error-free, regardless of how chaotic the input was.
 
-#### 🧠 AI Model Routing — 3-Tier System
-
-Not every task needs the same AI model. Using the most powerful model for everything would be slow and expensive. YMS Lab routes intelligently:
-
-| Task | Model | Why |
-|------|-------|-----|
-| Quick classification: "Is this financial data, a presentation, or notes?" | **Claude Haiku 4.5** | Fastest, cheapest — perfect for simple intent detection |
-| Core job: reading messy content and returning structured JSON | **Claude Sonnet 4.6** | Best quality-to-cost balance for the main parsing work |
-| Complex cases: 40+ page documents, multi-format, low-confidence outputs | **Claude Opus 4.8** | Most capable model, reserved for genuinely hard cases |
-
-This means you get top-quality results without burning unnecessary API budget on simple tasks.
-
 #### 💾 Prompt Caching
 The system prompt (instructions given to Claude) is identical for every single user request. Instead of re-sending and re-paying for it every time, YMS Lab uses **prompt caching** — Anthropic stores the prompt on their side and charges only for the new content each time. This dramatically cuts API costs at scale.
 
