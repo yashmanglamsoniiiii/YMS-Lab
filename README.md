@@ -7,7 +7,7 @@
 
 <br/>
 
-## 🧒 What Is YMS Lab? 
+##  What Is YMS Lab? 
 
 Imagine you have a huge pile of crumpled, messy notes thrown all over the floor. Some are random paragraphs. Some are broken tables. Some are bullet points that make no sense. None of it looks presentable.
 
